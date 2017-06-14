@@ -821,10 +821,10 @@ x-ibm-configuration:
   catalogs:
     apic-dev:
       properties:
-        runtime-url: $(TARGET_URL)
+        runtime-url: 'https://reviewsapp.mybluemix.net'
     sb:
       properties:
-        runtime-url: 'http://localhost:4001'
+        runtime-url: 'https://reviewsapp.mybluemix.net'
   assembly:
     execute:
       - operation-switch:
@@ -849,6 +849,7 @@ x-ibm-configuration:
                     stop-on-error:
                       - null
                     version: 1.0.0
+                    target-url: $(runtime-url)$(request.path)$(request.search)
           otherwise: []
           version: 1.0.0
       - activity-log:
@@ -857,3 +858,8 @@ x-ibm-configuration:
           error-content: payload
           version: 1.0.0
   gateway: datapower-gateway
+  properties:
+    runtime-url:
+      value: ''
+      description: ''
+      encoded: false
