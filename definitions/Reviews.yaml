@@ -1,0 +1,856 @@
+paths:
+  /reviews:
+    post:
+      tags:
+        - reviews
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: reviews.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/reviews'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/reviews'
+      deprecated: false
+    put:
+      tags:
+        - reviews
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: reviews.upsert__put_reviews
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/reviews'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/reviews'
+      deprecated: false
+    patch:
+      tags:
+        - reviews
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: reviews.upsert__patch_reviews
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/reviews'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/reviews'
+      deprecated: false
+    get:
+      tags:
+        - reviews
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: reviews.find
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/reviews'
+      deprecated: false
+  /reviews/replaceOrCreate:
+    post:
+      tags:
+        - reviews
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: reviews.replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/reviews'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/reviews'
+      deprecated: false
+  /reviews/upsertWithWhere:
+    post:
+      tags:
+        - reviews
+      summary: >-
+        Update an existing model instance or insert a new one into the data
+        source based on the where criteria.
+      operationId: reviews.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/reviews'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/reviews'
+      deprecated: false
+  '/reviews/{id}/exists':
+    get:
+      tags:
+        - reviews
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'reviews.exists__get_reviews_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/reviews/{id}':
+    head:
+      tags:
+        - reviews
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'reviews.exists__head_reviews_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - reviews
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: reviews.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields and include - must be a JSON-encoded string
+            ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/reviews'
+      deprecated: false
+    delete:
+      tags:
+        - reviews
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: reviews.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    put:
+      tags:
+        - reviews
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: 'reviews.prototype.updateAttributes__put_reviews_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/reviews'
+        - name: id
+          in: path
+          description: reviews id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/reviews'
+      deprecated: false
+    patch:
+      tags:
+        - reviews
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: 'reviews.prototype.updateAttributes__patch_reviews_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/reviews'
+        - name: id
+          in: path
+          description: reviews id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/reviews'
+      deprecated: false
+  '/reviews/{id}/replace':
+    post:
+      tags:
+        - reviews
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: reviews.replaceById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/reviews'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/reviews'
+      deprecated: false
+  /reviews/findOne:
+    get:
+      tags:
+        - reviews
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: reviews.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/reviews'
+      deprecated: false
+  /reviews/update:
+    post:
+      tags:
+        - reviews
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: reviews.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/reviews'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /reviews/count:
+    get:
+      tags:
+        - reviews
+      summary: Count instances of the model matched by where from the data source.
+      operationId: reviews.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /register:
+    post:
+      tags:
+        - registration
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: registration.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/registration'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/registration'
+      deprecated: false
+    put:
+      tags:
+        - registration
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: registration.upsert__put_register
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/registration'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/registration'
+      deprecated: false
+    patch:
+      tags:
+        - registration
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: registration.upsert__patch_register
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/registration'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/registration'
+      deprecated: false
+    get:
+      tags:
+        - registration
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: registration.find
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/registration'
+      deprecated: false
+  /register/replaceOrCreate:
+    post:
+      tags:
+        - registration
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: registration.replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/registration'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/registration'
+      deprecated: false
+  /register/upsertWithWhere:
+    post:
+      tags:
+        - registration
+      summary: >-
+        Update an existing model instance or insert a new one into the data
+        source based on the where criteria.
+      operationId: registration.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/registration'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/registration'
+      deprecated: false
+  '/register/{id}/exists':
+    get:
+      tags:
+        - registration
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'registration.exists__get_register_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/register/{id}':
+    head:
+      tags:
+        - registration
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'registration.exists__head_register_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - registration
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: registration.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields and include - must be a JSON-encoded string
+            ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/registration'
+      deprecated: false
+    delete:
+      tags:
+        - registration
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: registration.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    put:
+      tags:
+        - registration
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: 'registration.prototype.updateAttributes__put_register_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/registration'
+        - name: id
+          in: path
+          description: registration id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/registration'
+      deprecated: false
+    patch:
+      tags:
+        - registration
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: 'registration.prototype.updateAttributes__patch_register_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/registration'
+        - name: id
+          in: path
+          description: registration id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/registration'
+      deprecated: false
+  '/register/{id}/replace':
+    post:
+      tags:
+        - registration
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: registration.replaceById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/registration'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/registration'
+      deprecated: false
+  /register/findOne:
+    get:
+      tags:
+        - registration
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: registration.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/registration'
+      deprecated: false
+  /register/update:
+    post:
+      tags:
+        - registration
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: registration.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/registration'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /register/count:
+    get:
+      tags:
+        - registration
+      summary: Count instances of the model matched by where from the data source.
+      operationId: registration.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+definitions:
+  reviews:
+    properties:
+      appRegistrationId:
+        type: integer
+        format: int32
+      requestorId:
+        type: integer
+        format: int32
+      requestorName:
+        type: string
+      workItemId:
+        type: string
+      remarks:
+        type: string
+      rating:
+        type: integer
+        format: int32
+    additionalProperties: false
+  x-any:
+    properties: {}
+  registration:
+    properties:
+      id:
+        type: number
+        format: double
+    additionalProperties: false
+basePath: /api
+swagger: '2.0'
+info:
+  x-ibm-name: reviews
+  version: 1.0.0
+  title: Reviews
+schemes:
+  - https
+host: $(catalog.host)
+consumes:
+  - application/json
+produces:
+  - application/json
+securityDefinitions:
+  clientIdHeader:
+    type: apiKey
+    in: header
+    name: X-IBM-Client-Id
+  clientSecretHeader:
+    in: header
+    name: X-IBM-Client-Secret
+    type: apiKey
+security:
+  - clientIdHeader: []
+x-ibm-configuration:
+  testable: true
+  enforced: true
+  cors:
+    enabled: true
+  catalogs:
+    apic-dev:
+      properties:
+        runtime-url: $(TARGET_URL)
+    sb:
+      properties:
+        runtime-url: 'http://localhost:4001'
+  assembly:
+    execute:
+      - operation-switch:
+          title: operation-switch
+          case:
+            - operations:
+                - reviews.find
+              execute:
+                - invoke:
+                    target-url: $(runtime-url)$(request.path)$(request.search)
+                    title: getOperation
+                    verb: GET
+            - operations:
+                - reviews.create
+              execute:
+                - invoke:
+                    title: createOperation
+                    timeout: 60
+                    verb: POST
+                    cache-response: protocol
+                    cache-ttl: 900
+                    stop-on-error:
+                      - null
+                    version: 1.0.0
+          otherwise: []
+          version: 1.0.0
+      - activity-log:
+          title: activity-log
+          content: activity
+          error-content: payload
+          version: 1.0.0
+  gateway: datapower-gateway

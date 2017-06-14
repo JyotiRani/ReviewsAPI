@@ -1,0 +1,68 @@
+{
+  "name": "reviews",
+  "plural": "reviews",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "dashdb": {
+    "schema": "BLUADMIN",
+    "table": "RVW_REVIEWS"
+  },
+  "properties": {
+    "rating": {
+      "type": "number",
+      "required": true,
+      "dashdb": {
+        "columnName": "RATING"
+      },
+      "isArray": false
+    },
+    "remarks": {
+      "type": "string",
+      "required": true,
+      "dashdb": {
+        "columnName": "REMARKS"
+      },
+      "isArray": false
+    },
+    "requestorName": {
+      "type": "string",
+      "required": false,
+      "dashdb": {
+        "columnName": "REQUESTORNAME"
+      },
+      "isArray": false
+    },
+    "requestorId": {
+      "type": "number",
+      "required": true,
+      "dashdb": {
+        "columnName": "REQUESTORID"
+      },
+      "isArray": false
+    },	
+    "workItemId": {
+      "type": "string",
+      "required": true,
+	  "id": true,
+      "dashdb": {
+        "columnName": "WORKITEMID"
+      },
+      "isArray": false
+    },
+    "appRegistrationId": {
+      "type": "number",
+      "required": false,
+      "dashdb": {
+        "columnName": "APPREGISTRATIONID"
+      },
+      "isArray": false
+    }	
+	},
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
