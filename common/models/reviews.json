@@ -51,15 +51,7 @@
         "columnName": "WORKITEMID"
       },
       "isArray": false
-    },
-    "appRegistrationId": {
-      "type": "number",
-      "required": false,
-      "dashdb": {
-        "columnName": "APPREGISTRATIONID"
-      },
-      "isArray": false
-    }	
+    }
 	},
   "validations": [],
   "relations": {},

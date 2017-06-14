@@ -22,8 +22,8 @@ function initDBConnection() {
 initDBConnection();
 
 
- dataSources['tasks'] = {
-          name: 'tasks',
+ dataSources['reviews'] = {
+          name: 'reviews',
           connector: 'dashdb',
           dsn: credentials.dsn,
           host: credentials.hostname,

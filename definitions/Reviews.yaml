@@ -83,6 +83,12 @@ paths:
             items:
               $ref: '#/definitions/reviews'
       deprecated: false
+    parameters:
+      - name: regId
+        type: integer
+        required: false
+        in: query
+        format: int64
   /reviews/replaceOrCreate:
     post:
       tags:
@@ -762,9 +768,6 @@ paths:
 definitions:
   reviews:
     properties:
-      appRegistrationId:
-        type: integer
-        format: int32
       requestorId:
         type: integer
         format: int32
