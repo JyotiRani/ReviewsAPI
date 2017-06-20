@@ -1,11 +1,11 @@
 {
   "reviews": {
-    "host": "dashdb-txn-small-yp-dal09-114.services.dal.bluemix.net",
+    "host": "dashdb-txn-small-yp-dal09-203.services.dal.bluemix.net",
     "port": 50000,
     "database": "BLUDB",
-    "password": "YTg3YTYxZmE1ZGIz",
+    "password": "MzRmOTEzNTk5Nzg2",
     "name": "reviews",
-    "dsn": "DATABASE=BLUDB;HOSTNAME=dashdb-txn-small-yp-dal09-114.services.dal.bluemix.net;PORT=50000;PROTOCOL=TCPIP;UID=bluadmin;PWD=YTg3YTYxZmE1ZGIz;",
+    "dsn": "DATABASE=BLUDB;HOSTNAME=dashdb-txn-small-yp-dal09-203.services.dal.bluemix.net;PORT=50000;PROTOCOL=TCPIP;UID=bluadmin;PWD=MzRmOTEzNTk5Nzg2;",
     "user": "bluadmin",
     "connector": "dashdb"
   }

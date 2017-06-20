@@ -22,9 +22,7 @@ paths:
     put:
       tags:
         - reviews
-      summary: >-
-        Patch an existing model instance or insert a new one into the data
-        source.
+      summary: Patch an existing model instance or insert a new one into the data source.
       operationId: reviews.upsert__put_reviews
       parameters:
         - name: data
@@ -43,9 +41,7 @@ paths:
     patch:
       tags:
         - reviews
-      summary: >-
-        Patch an existing model instance or insert a new one into the data
-        source.
+      summary: Patch an existing model instance or insert a new one into the data source.
       operationId: reviews.upsert__patch_reviews
       parameters:
         - name: data
@@ -69,9 +65,7 @@ paths:
       parameters:
         - name: filter
           in: query
-          description: >-
-            Filter defining fields, where, include, order, offset, and limit -
-            must be a JSON-encoded string ({"something":"value"})
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
           required: false
           type: string
           format: JSON
@@ -83,19 +77,11 @@ paths:
             items:
               $ref: '#/definitions/reviews'
       deprecated: false
-    parameters:
-      - name: regId
-        type: integer
-        required: false
-        in: query
-        format: int64
   /reviews/replaceOrCreate:
     post:
       tags:
         - reviews
-      summary: >-
-        Replace an existing model instance or insert a new one into the data
-        source.
+      summary: Replace an existing model instance or insert a new one into the data source.
       operationId: reviews.replaceOrCreate
       parameters:
         - name: data
@@ -115,9 +101,7 @@ paths:
     post:
       tags:
         - reviews
-      summary: >-
-        Update an existing model instance or insert a new one into the data
-        source based on the where criteria.
+      summary: Update an existing model instance or insert a new one into the data source based on the where criteria.
       operationId: reviews.upsertWithWhere
       parameters:
         - name: where
@@ -197,9 +181,7 @@ paths:
           format: JSON
         - name: filter
           in: query
-          description: >-
-            Filter defining fields and include - must be a JSON-encoded string
-            ({"something":"value"})
+          description: 'Filter defining fields and include - must be a JSON-encoded string ({"something":"value"})'
           required: false
           type: string
           format: JSON
@@ -230,9 +212,7 @@ paths:
     put:
       tags:
         - reviews
-      summary: >-
-        Patch attributes for a model instance and persist it into the data
-        source.
+      summary: Patch attributes for a model instance and persist it into the data source.
       operationId: 'reviews.prototype.updateAttributes__put_reviews_{id}'
       parameters:
         - name: data
@@ -257,9 +237,7 @@ paths:
     patch:
       tags:
         - reviews
-      summary: >-
-        Patch attributes for a model instance and persist it into the data
-        source.
+      summary: Patch attributes for a model instance and persist it into the data source.
       operationId: 'reviews.prototype.updateAttributes__patch_reviews_{id}'
       parameters:
         - name: data
@@ -285,9 +263,7 @@ paths:
     post:
       tags:
         - reviews
-      summary: >-
-        Replace attributes for a model instance and persist it into the data
-        source.
+      summary: Replace attributes for a model instance and persist it into the data source.
       operationId: reviews.replaceById
       parameters:
         - name: id
@@ -318,9 +294,7 @@ paths:
       parameters:
         - name: filter
           in: query
-          description: >-
-            Filter defining fields, where, include, order, offset, and limit -
-            must be a JSON-encoded string ({"something":"value"})
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
           required: false
           type: string
           format: JSON
@@ -408,9 +382,7 @@ paths:
     put:
       tags:
         - registration
-      summary: >-
-        Patch an existing model instance or insert a new one into the data
-        source.
+      summary: Patch an existing model instance or insert a new one into the data source.
       operationId: registration.upsert__put_register
       parameters:
         - name: data
@@ -429,9 +401,7 @@ paths:
     patch:
       tags:
         - registration
-      summary: >-
-        Patch an existing model instance or insert a new one into the data
-        source.
+      summary: Patch an existing model instance or insert a new one into the data source.
       operationId: registration.upsert__patch_register
       parameters:
         - name: data
@@ -455,9 +425,7 @@ paths:
       parameters:
         - name: filter
           in: query
-          description: >-
-            Filter defining fields, where, include, order, offset, and limit -
-            must be a JSON-encoded string ({"something":"value"})
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
           required: false
           type: string
           format: JSON
@@ -473,9 +441,7 @@ paths:
     post:
       tags:
         - registration
-      summary: >-
-        Replace an existing model instance or insert a new one into the data
-        source.
+      summary: Replace an existing model instance or insert a new one into the data source.
       operationId: registration.replaceOrCreate
       parameters:
         - name: data
@@ -495,9 +461,7 @@ paths:
     post:
       tags:
         - registration
-      summary: >-
-        Update an existing model instance or insert a new one into the data
-        source based on the where criteria.
+      summary: Update an existing model instance or insert a new one into the data source based on the where criteria.
       operationId: registration.upsertWithWhere
       parameters:
         - name: where
@@ -577,9 +541,7 @@ paths:
           format: JSON
         - name: filter
           in: query
-          description: >-
-            Filter defining fields and include - must be a JSON-encoded string
-            ({"something":"value"})
+          description: 'Filter defining fields and include - must be a JSON-encoded string ({"something":"value"})'
           required: false
           type: string
           format: JSON
@@ -610,9 +572,7 @@ paths:
     put:
       tags:
         - registration
-      summary: >-
-        Patch attributes for a model instance and persist it into the data
-        source.
+      summary: Patch attributes for a model instance and persist it into the data source.
       operationId: 'registration.prototype.updateAttributes__put_register_{id}'
       parameters:
         - name: data
@@ -637,9 +597,7 @@ paths:
     patch:
       tags:
         - registration
-      summary: >-
-        Patch attributes for a model instance and persist it into the data
-        source.
+      summary: Patch attributes for a model instance and persist it into the data source.
       operationId: 'registration.prototype.updateAttributes__patch_register_{id}'
       parameters:
         - name: data
@@ -665,9 +623,7 @@ paths:
     post:
       tags:
         - registration
-      summary: >-
-        Replace attributes for a model instance and persist it into the data
-        source.
+      summary: Replace attributes for a model instance and persist it into the data source.
       operationId: registration.replaceById
       parameters:
         - name: id
@@ -698,9 +654,7 @@ paths:
       parameters:
         - name: filter
           in: query
-          description: >-
-            Filter defining fields, where, include, order, offset, and limit -
-            must be a JSON-encoded string ({"something":"value"})
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
           required: false
           type: string
           format: JSON
@@ -768,18 +722,29 @@ paths:
 definitions:
   reviews:
     properties:
-      requestorId:
-        type: integer
-        format: int32
-      requestorName:
-        type: string
-      workItemId:
-        type: string
+      rating:
+        type: number
+        format: double
       remarks:
         type: string
-      rating:
-        type: integer
-        format: int32
+      requestorName:
+        type: string
+      requestorId:
+        type: number
+        format: double
+      workItemId:
+        type: number
+        format: double
+      workItemType:
+        type: string
+      createdDate:
+        type: string
+        format: date-time
+    required:
+      - rating
+      - requestorId
+      - workItemId
+      - workItemType
     additionalProperties: false
   x-any:
     properties: {}

@@ -21,7 +21,7 @@
     },
     "remarks": {
       "type": "string",
-      "required": true,
+      "required": false,
       "dashdb": {
         "columnName": "REMARKS"
       },
@@ -44,14 +44,30 @@
       "isArray": false
     },	
     "workItemId": {
-      "type": "string",
+      "type": "number",
       "required": true,
 	  "id": true,
       "dashdb": {
         "columnName": "WORKITEMID"
       },
       "isArray": false
-    }
+    },
+    "workItemType": {
+      "type": "string",
+      "required": true,	  
+      "dashdb": {
+        "columnName": "WORKITEMTYPE"
+      },
+      "isArray": false
+    },	
+    "createdDate": {
+      "type": "date",
+      "required": false,	  
+      "dashdb": {
+        "columnName": "CREATEDDATE"
+      },
+      "isArray": false
+    }	
 	},
   "validations": [],
   "relations": {},
